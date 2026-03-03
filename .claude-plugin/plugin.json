@@ -1,0 +1,12 @@
+{
+  "name": "go-workflow",
+  "description": "Git workflow skills, commands, and agents for Go developers — conventional commits, automated code review, commit explanation, PR generation, and changelog",
+  "version": "1.0.0",
+  "author": {
+    "name": "go-workflow contributors"
+  },
+  "homepage": "https://github.com/yourusername/go-workflow",
+  "repository": "https://github.com/yourusername/go-workflow",
+  "license": "MIT",
+  "keywords": ["git", "golang", "workflow", "conventional-commits", "code-review", "productivity"]
+}
