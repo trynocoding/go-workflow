@@ -11,7 +11,7 @@ Automates and standardizes the git workflow you repeat every day: writing commit
 Register the marketplace, then install the plugin:
 
 ```
-/plugin marketplace add yourusername/go-workflow-marketplace
+/plugin marketplace add trynocoding/go-workflow-marketplace
 /plugin install go-workflow@go-workflow-marketplace
 ```
 
@@ -20,7 +20,7 @@ Register the marketplace, then install the plugin:
 Clone the repo and load it directly with `--plugin-dir`:
 
 ```bash
-git clone https://github.com/yourusername/go-workflow
+git clone https://github.com/trynocoding/go-workflow
 claude --plugin-dir ./go-workflow
 ```
 

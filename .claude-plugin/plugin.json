@@ -5,8 +5,8 @@
   "author": {
     "name": "go-workflow contributors"
   },
-  "homepage": "https://github.com/yourusername/go-workflow",
-  "repository": "https://github.com/yourusername/go-workflow",
+  "homepage": "https://github.com/trynocoding/go-workflow",
+  "repository": "https://github.com/trynocoding/go-workflow",
   "license": "MIT",
   "keywords": ["git", "golang", "workflow", "conventional-commits", "code-review", "productivity"]
 }
