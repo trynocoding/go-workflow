@@ -1,11 +1,7 @@
 ---
 name: go-code-review
-description: Use when reviewing Go code changes — checks idiomatic Go patterns, error handling, concurrency safety, interface design, and performance. Works across any Go project type.
-license: MIT
-compatibility: claude-code, opencode
-metadata:
-  workflow: code-review
-  language: go
+description: Go code review checklist — idiomatic patterns, error handling, concurrency safety, interface design, and performance. Load when reviewing Go code changes or checking PRs.
+user-invocable: false
 ---
 
 # Go Code Review

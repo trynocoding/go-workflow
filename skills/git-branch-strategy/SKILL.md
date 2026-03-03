@@ -1,11 +1,7 @@
 ---
 name: git-branch-strategy
-description: Use when creating branches, starting new features, or preparing to merge. Enforces consistent branch naming and workflow discipline for Go projects.
-license: MIT
-compatibility: claude-code, opencode
-metadata:
-  workflow: git
-  language: go
+description: Go project branch naming and workflow conventions — type prefixes, protection rules, rebase vs merge strategy. Load when creating branches or starting feature work.
+user-invocable: false
 ---
 
 # Git Branch Strategy

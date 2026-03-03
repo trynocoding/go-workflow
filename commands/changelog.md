@@ -1,17 +1,20 @@
 ---
-description: "Generate a changelog between two refs. Usage: /changelog <from>..<to> (e.g. /changelog v1.2.0..v1.3.0 or /changelog v1.2.0..HEAD). Organizes commits by type into a formatted changelog."
+name: changelog
+description: "Generate a changelog between two refs. Usage: /go-workflow:changelog <from>..<to> (e.g. v1.2.0..v1.3.0 or v1.2.0..HEAD). Organizes commits by type into Keep a Changelog format."
+argument-hint: "<from>..<to>"
+disable-model-invocation: true
 ---
 
-Generating changelog for range: $1
+Generating changelog for range: $ARGUMENTS
 
 Commits in range:
 ```
-!`git log $1 --oneline --no-merges`
+!`git log $ARGUMENTS --oneline --no-merges`
 ```
 
 Commit details (with body):
 ```
-!`git log $1 --no-merges --format="----%ncommit %H%nAuthor: %an%nDate: %ad%n%n%B"`
+!`git log $ARGUMENTS --no-merges --format="----%ncommit %H%nAuthor: %an%nDate: %ad%n%n%B"`
 ```
 
 Tags for context:

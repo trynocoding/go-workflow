@@ -1,11 +1,7 @@
 ---
 name: git-conventional-commits
-description: Use when writing commit messages, staging changes, or preparing commits. Enforces Conventional Commits spec with Go-project-aware scope conventions and atomic commit discipline.
-license: MIT
-compatibility: claude-code, opencode
-metadata:
-  workflow: git
-  language: go
+description: Go project git conventions — Conventional Commits format with Go-aware scope naming, atomic commit discipline, and breaking change handling. Load when writing commit messages or reviewing commit history.
+user-invocable: false
 ---
 
 # Git Conventional Commits

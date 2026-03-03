@@ -1,22 +1,25 @@
 ---
-description: "Explain what a commit changed, why, and its impact. Usage: /explain <commit-sha> — shows the full diff and provides a clear technical explanation of the changes."
+name: explain
+description: "Explain what a commit changed, why, and its impact. Usage: /go-workflow:explain <commit-sha>"
+argument-hint: "<commit-sha>"
+disable-model-invocation: true
 ---
 
-Explaining commit: $1
+Explaining commit: $ARGUMENTS
 
 Commit metadata:
 ```
-!`git show $1 --stat --format="Author: %an <%ae>%nDate: %ad%nMessage: %s%n%n%b"`
+!`git show $ARGUMENTS --stat --format="Author: %an <%ae>%nDate: %ad%nMessage: %s%n%n%b"`
 ```
 
 Full diff:
 ```
-!`git show $1`
+!`git show $ARGUMENTS`
 ```
 
 Git context (commits around it):
 ```
-!`git log $1~2..$1 --oneline --graph`
+!`git log $ARGUMENTS~2..$ARGUMENTS --oneline --graph`
 ```
 
 Provide a clear technical explanation structured as follows:

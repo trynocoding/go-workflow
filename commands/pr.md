@@ -1,25 +1,28 @@
 ---
-description: "Generate a pull request description for the current branch. Compares against main (or specify base: /pr develop). Produces a structured PR body ready to paste into GitHub."
+name: pr
+description: "Generate a pull request description for the current branch. Compares against main by default, or specify a base branch: /go-workflow:pr develop"
+argument-hint: "[base-branch]"
+disable-model-invocation: true
 ---
 
 Load and follow the `git-conventional-commits` and `go-code-review` skills for context.
 
 Current branch: !`git branch --show-current`
-Base branch: ${1:-main}
+Base branch: ${ARGUMENTS:-main}
 
 Commits in this PR:
 ```
-!`git log origin/${1:-main}..HEAD --oneline`
+!`git log origin/${ARGUMENTS:-main}..HEAD --oneline`
 ```
 
 Files changed:
 ```
-!`git diff origin/${1:-main}..HEAD --name-status`
+!`git diff origin/${ARGUMENTS:-main}..HEAD --name-status`
 ```
 
 Full diff:
 ```
-!`git diff origin/${1:-main}..HEAD`
+!`git diff origin/${ARGUMENTS:-main}..HEAD`
 ```
 
 Generate a pull request description in the following format. Output only the markdown — no preamble:
