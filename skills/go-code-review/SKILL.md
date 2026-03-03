@@ -6,14 +6,21 @@ user-invocable: false
 
 # Go Code Review
 
+## Project Go Version
+
+Detected Go version: !`grep -rh "^go " --include="go.mod" . 2>/dev/null | cut -d' ' -f2 | sort | uniq -c | sort -nr | head -1 | xargs | cut -d' ' -f2 | grep . || echo unknown`
+
+Use this version to scope the **Modern Go Syntax** checks below — only flag patterns from versions at or below this version.
+
 ## Review Priorities (in order)
 
 1. **Correctness** — Does it do what it claims?
 2. **Error handling** — Are all errors handled explicitly?
 3. **Concurrency safety** — Any races, deadlocks, or goroutine leaks?
 4. **Idiomatic Go** — Does it follow Go conventions?
-5. **Performance** — Any unnecessary allocations or blocking calls?
-6. **Maintainability** — Is it clear, testable, minimal?
+5. **Modern syntax** — Does it use outdated patterns that have better modern alternatives?
+6. **Performance** — Any unnecessary allocations or blocking calls?
+7. **Maintainability** — Is it clear, testable, minimal?
 
 ## Critical Checks
 
@@ -170,6 +177,12 @@ type Config struct {
 }
 ```
 
+## Modern Go Syntax
+
+Flag outdated patterns as **🔵 Minor / Idiomatic**. Full versioned rules are in [reference.md](reference.md).
+Load `reference.md` when performing the Idiomatic Go check.
+Only flag patterns from Go versions **at or below** the detected project version.
+
 ## Output Format
 
 Report findings grouped by severity:
@@ -206,3 +219,7 @@ Report findings grouped by severity:
 - Unbounded goroutine creation in a loop
 - SQL/command injection via string concatenation
 - Hardcoded credentials or secrets
+
+## Additional Resources
+
+- [reference.md](reference.md) — versioned modern Go syntax: outdated patterns to flag as 🔵 Minor during review
