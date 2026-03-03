@@ -1,0 +1,22 @@
+{
+  "name": "go-workflow-marketplace",
+  "owner": {
+    "name": "go-workflow contributors"
+  },
+  "metadata": {
+    "description": "Git workflow plugins for Go developers — conventional commits, code review, PR generation, and changelog",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "go-workflow",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/yourusername/go-workflow.git"
+      },
+      "description": "Git workflow skills, commands, and agents for Go developers — conventional commits, automated code review, commit explanation, PR generation, and changelog",
+      "version": "1.0.0",
+      "strict": true
+    }
+  ]
+}

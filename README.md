@@ -6,20 +6,22 @@ Automates and standardizes the git workflow you repeat every day: writing commit
 
 ## Installation
 
-### Claude Code (Plugin)
+### Via Marketplace (recommended)
 
-Clone into your plugins directory and reference it in your Claude Code settings:
+Register the marketplace, then install the plugin:
 
-```bash
-git clone https://github.com/yourusername/go-workflow ~/.claude/plugins/go-workflow
+```
+/plugin marketplace add yourusername/go-workflow-marketplace
+/plugin install go-workflow@go-workflow-marketplace
 ```
 
-Then add to your `~/.claude/settings.json`:
+### For local development / testing
 
-```json
-{
-  "plugins": ["~/.claude/plugins/go-workflow"]
-}
+Clone the repo and load it directly with `--plugin-dir`:
+
+```bash
+git clone https://github.com/yourusername/go-workflow
+claude --plugin-dir ./go-workflow
 ```
 
 Once installed, all commands are namespaced as `/go-workflow:<command>`.
@@ -35,6 +37,7 @@ Once installed, all commands are namespaced as `/go-workflow:<command>`.
 | `git-conventional-commits` | Any commit-related task |
 | `go-code-review` | Reviewing Go code changes |
 | `git-branch-strategy` | Creating branches, starting features |
+| `use-modern-go` | Writing new Go code |
 
 Skills have `user-invocable: false` — Claude loads them automatically when relevant. You don't invoke them directly.
 
@@ -113,14 +116,18 @@ Use the git-master subagent to find when this race condition was introduced: fun
 ```
 go-workflow/
 ├── .claude-plugin/
-│   └── plugin.json              # Claude Code plugin metadata
+│   ├── plugin.json              # Claude Code plugin metadata
+│   └── marketplace.json         # Local dev marketplace (for --plugin-dir testing)
 ├── skills/
 │   ├── git-conventional-commits/
 │   │   └── SKILL.md             # Conventional Commits for Go projects
 │   ├── go-code-review/
-│   │   └── SKILL.md             # Go-specific code review checklist
-│   └── git-branch-strategy/
-│       └── SKILL.md             # Branch naming and workflow
+│   │   ├── SKILL.md             # Go-specific code review checklist
+│   │   └── reference.md         # Versioned modern Go syntax flags (1.13–1.26)
+│   ├── git-branch-strategy/
+│   │   └── SKILL.md             # Branch naming and workflow
+│   └── use-modern-go/
+│       └── SKILL.md             # Modern Go syntax reference (write-time)
 ├── commands/
 │   ├── commit.md                # /go-workflow:commit
 │   ├── review.md                # /go-workflow:review [N]
@@ -139,7 +146,7 @@ Skills and commands live directly in this repo. To contribute:
 
 1. Fork and create a branch (`feat/my-skill`)
 2. Add your skill/command following the existing format
-3. Test it in your project with the plugin installed
+3. Test it with `claude --plugin-dir ./go-workflow`
 4. Submit a PR with a description of what it does and when it triggers
 
 For skills: make sure `name` in frontmatter matches the directory name exactly.
