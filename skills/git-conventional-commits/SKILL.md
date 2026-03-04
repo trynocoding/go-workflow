@@ -2,6 +2,7 @@
 name: git-conventional-commits
 description: Go project git conventions — Conventional Commits format with Go-aware scope naming, atomic commit discipline, and breaking change handling. Load when writing commit messages or reviewing commit history.
 user-invocable: false
+allowed-tools: []
 ---
 
 # Git Conventional Commits

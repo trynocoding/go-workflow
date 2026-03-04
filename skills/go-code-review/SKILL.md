@@ -2,6 +2,8 @@
 name: go-code-review
 description: Go code review checklist — idiomatic patterns, error handling, concurrency safety, interface design, and performance. Load when reviewing Go code changes or checking PRs.
 user-invocable: false
+allowed-tools:
+  - Read
 ---
 
 # Go Code Review

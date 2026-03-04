@@ -3,6 +3,9 @@ name: changelog
 description: "Generate a changelog between two refs. Usage: /go-workflow:changelog <from>..<to> (e.g. v1.2.0..v1.3.0 or v1.2.0..HEAD). Organizes commits by type into Keep a Changelog format."
 argument-hint: "<from>..<to>"
 disable-model-invocation: true
+allowed-tools:
+  - Bash
+  - Read
 ---
 
 Generating changelog for range: $ARGUMENTS

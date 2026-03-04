@@ -1,6 +1,9 @@
 ---
 description: Generate and execute a Conventional Commit for staged changes. Reads staged diff, writes a properly scoped commit message, and runs git commit. Stage your changes with git add first.
 disable-model-invocation: true
+allowed-tools:
+  - Bash
+  - Read
 ---
 
 Load and follow the `git-conventional-commits` skill.

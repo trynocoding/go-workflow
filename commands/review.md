@@ -3,6 +3,11 @@ name: review
 description: "Review recent Go code changes for correctness, idiomatic patterns, error handling, and concurrency safety. Usage: /go-workflow:review [N] where N is number of commits (default: 1)."
 argument-hint: "[N]"
 disable-model-invocation: true
+allowed-tools:
+  - Bash
+  - Read
+  - Grep
+  - Glob
 ---
 
 Load and follow the `go-code-review` skill.

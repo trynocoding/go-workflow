@@ -3,6 +3,11 @@ name: pr
 description: "Generate a pull request description for the current branch. Compares against main by default, or specify a base branch: /go-workflow:pr develop"
 argument-hint: "[base-branch]"
 disable-model-invocation: true
+allowed-tools:
+  - Bash
+  - Read
+  - Grep
+  - Glob
 ---
 
 Load and follow the `git-conventional-commits` and `go-code-review` skills for context.

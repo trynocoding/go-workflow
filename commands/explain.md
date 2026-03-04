@@ -3,6 +3,9 @@ name: explain
 description: "Explain what a commit changed, why, and its impact. Usage: /go-workflow:explain <commit-sha>"
 argument-hint: "<commit-sha>"
 disable-model-invocation: true
+allowed-tools:
+  - Bash
+  - Read
 ---
 
 Explaining commit: $ARGUMENTS

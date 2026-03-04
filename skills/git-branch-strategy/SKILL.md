@@ -2,6 +2,7 @@
 name: git-branch-strategy
 description: Go project branch naming and workflow conventions — type prefixes, protection rules, rebase vs merge strategy. Load when creating branches or starting feature work.
 user-invocable: false
+allowed-tools: []
 ---
 
 # Git Branch Strategy
