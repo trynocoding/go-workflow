@@ -48,3 +48,5 @@ Provide a clear technical explanation structured as follows:
 - Notable patterns used or introduced?
 
 Keep explanations technical and precise. Use file:line references for specific findings.
+
+Must reply in Simplified Chinese.

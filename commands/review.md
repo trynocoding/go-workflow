@@ -40,3 +40,5 @@ Perform a thorough code review following the `go-code-review` skill. Cover all s
 For each finding, include the exact file:line reference and a concrete fix suggestion.
 
 End with a summary and overall assessment: Ready to merge / Needs fixes / Major revision needed.
+
+Must reply in Simplified Chinese.
