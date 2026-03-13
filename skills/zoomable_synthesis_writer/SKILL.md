@@ -1,9 +1,12 @@
 ---
 name: zoomable_synthesis_writer
 description: Generate multi-level summaries (one-liner, paragraph, page) for PRs, handoffs, and milestone reports.
-  TRIGGER when: user asks for PR description, merge-readiness pack, milestone summary, handoff document, weekly report, standup update, or design decision review.
-  DO NOT TRIGGER when: user wants new code, bug fixes, or general coding tasks.
-tools: all
+user-invocable: false
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 ---
 
 # Zoomable Synthesis Writer

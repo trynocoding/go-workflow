@@ -1,9 +1,14 @@
 ---
 name: decisive_check_designer
 description: Transform architectural concerns, Failure Modes, or objections into low-cost executable verification plans (concurrency tests, fault injection, idempotency checks). Each check includes Pass/Fail criteria that can directly change architectural decisions.
-  TRIGGER when: risks are identified but verification method is unclear, given Devil's Advocate fatal flaws, given SRE/Security/DBA failure modes, or "does this design actually work" remains an open question.
-  DO NOT TRIGGER when: design is not yet defined, user wants implementation code, or the verification approach is already clear and agreed upon.
-tools: all
+user-invocable: false
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
+  - Bash
 ---
 
 # Decisive Check Designer

@@ -1,9 +1,12 @@
 ---
 name: acceptance_pack_merger
 description: Merge multiple role-based Acceptance Packs (SRE/Security/DBA/Architect) into a unified Architecture Review checklist with Blockers/Gates/Recommendations classification, explicit conflicts, and Go/No-Go status. Prepares formal ARB review materials.
-  TRIGGER when: multiple role-based review results exist and need consolidation, need to determine blockers vs recommendations, preparing materials for Architecture Review Board meeting, or preventing conflicting requirements across roles.
-  DO NOT TRIGGER when: only single role review is done, user wants to write new Acceptance Packs (use role_casting_reviewer), or the task is implementation rather than review consolidation.
-tools: all
+user-invocable: false
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 ---
 
 # Acceptance Pack Merger

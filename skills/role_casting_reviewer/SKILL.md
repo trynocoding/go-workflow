@@ -1,9 +1,12 @@
 ---
 name: role_casting_reviewer
 description: Cast AI as expert roles (SRE/Security/DBA/Architect) to produce structured Acceptance Packs with Failure Modes, Must-have Constraints, and Decisive Checks. Exposes cross-department constraints before implementation.
-  TRIGGER when: system design needs pre-review, team lacks SRE/Security/DBA experts, need to expose cross-department constraints early, or require role-based acceptance packs instead of generic suggestions.
-  DO NOT TRIGGER when: code is already written and needs debugging, user wants implementation help, or the task is straightforward without architectural impact.
-tools: all
+user-invocable: false
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 ---
 
 # Role Casting Reviewer

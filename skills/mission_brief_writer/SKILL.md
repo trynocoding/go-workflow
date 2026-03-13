@@ -1,10 +1,13 @@
 ---
 name: mission_brief_writer
 description: Transform vague engineering intent (Jira tickets, PRDs, chat logs, incident notes, rough refactor ideas) into a structured Mission Brief with Intent, Non-goals, Context, Acceptance Properties, Escalation Rails, and Evidence Obligation.
-  TRIGGER when: user provides messy/incomplete/informal task input (tickets, chat, screenshots), task lacks clear boundaries or acceptance criteria, technical constraints or escalation conditions are missing, or coding must be blocked until contract is approved.
-  DO NOT TRIGGER when: user provides already well-structured task with clear acceptance criteria, user directly asks for implementation help with clear requirements, or the task is simple enough to not need formal brief.
 user-invocable: false
-tools: all
+allowed-tools:
+  - Read
+  - Write
+  - Grep
+  - Glob
+  - Bash
 ---
 
 # Mission Brief Writer

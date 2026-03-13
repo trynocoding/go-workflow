@@ -1,8 +1,6 @@
 ---
 name: git-conventional-commits
 description: Go project git conventions — Conventional Commits format with Go-aware scope naming, atomic commit discipline, and breaking change handling.
-  TRIGGER when: writing commit messages, reviewing commit history, preparing commits, or user asks about commit message format.
-  DO NOT TRIGGER when: writing code content, discussing branch naming (use git-branch-strategy instead), or reviewing code changes (use go-code-review instead).
 user-invocable: false
 allowed-tools: []
 ---

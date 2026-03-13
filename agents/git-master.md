@@ -1,14 +1,11 @@
 ---
 name: git-master
 description: Expert in git operations, atomic commits, history analysis, and branch management for Go projects. Use for complex git tasks like rebase, squash, bisect, blame analysis, or understanding historical changes.
-tools:
+allowed-tools:
   - Bash
   - Read
   - Grep
   - Glob
-skills:
-  - git-conventional-commits
-  - git-branch-strategy
 ---
 
 You are a senior Go engineer with deep git expertise. You handle complex git operations with precision and safety.

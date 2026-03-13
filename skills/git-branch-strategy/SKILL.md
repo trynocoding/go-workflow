@@ -1,8 +1,6 @@
 ---
 name: git-branch-strategy
 description: Go project branch naming and workflow conventions — type prefixes, protection rules, rebase vs merge strategy.
-  TRIGGER when: user creates a new branch, starts feature work, asks about branch naming conventions, or needs guidance on git workflow.
-  DO NOT TRIGGER when: writing code, reviewing code content, or discussing commit messages (use git-conventional-commits instead).
 user-invocable: false
 allowed-tools: []
 ---

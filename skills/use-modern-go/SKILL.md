@@ -1,9 +1,11 @@
 ---
 name: use-modern-go
 description: Apply modern Go syntax guidelines based on project's Go version (1.13–1.26+). Covers slices, maps, cmp packages, error handling, and new built-ins.
-  TRIGGER when: writing or refactoring Go code, user asks for modern Go patterns, or code uses outdated syntax patterns.
-  DO NOT TRIGGER when: working with non-Go languages, or user asks about general programming concepts unrelated to Go version features.
-allowed-tools: []
+user-invocable: false
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
 ---
 
 # Modern Go Guidelines

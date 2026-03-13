@@ -1,9 +1,14 @@
 ---
 name: disposable_bet_orchestrator
 description: Orchestrate disposable prototype experiments for technical selection debates. Defines seams, discriminating checks, parallel isolation tasks, and enforces prototype disposal with production rewrite.
-  TRIGGER when: team debates between 2+ competing implementation approaches, need benchmark/fuzz/load testing to compare options, POC/MVP feasibility validation required, or risk of prototype code leaking into production.
-  DO NOT TRIGGER when: single clear implementation path exists, user wants direct coding without comparison, or the decision is business-driven not technical.
-tools: all
+user-invocable: false
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+  - Grep
+  - Glob
+  - Bash
 ---
 
 # Disposable Bet Orchestrator

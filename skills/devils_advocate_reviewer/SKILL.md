@@ -1,9 +1,12 @@
 ---
 name: devils_advocate_reviewer
-description: Apply adversarial pressure testing to designs, systematically revealing hidden assumptions and fatal flaws. Provides low-cost executable Decisive Checks (e.g., duplicate delivery simulation, idempotency verification) to combat groupthink.
-  TRIGGER when: design "looks too smooth", team reached premature consensus, need someone to play devil's advocate, or need to find critical issues like data loss, inconsistency, permission bypass, cascade failures.
-  DO NOT TRIGGER when: user wants optimization suggestions, the design already has identified blockers, or user seeks implementation help rather than challenge.
-tools: all
+description: Apply adversarial pressure testing to designs, systematically revealing hidden assumptions and fatal flaws. Provides low-cost executable Decisive Checks to combat groupthink.
+user-invocable: false
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
 ---
 
 # Devil's Advocate Reviewer
