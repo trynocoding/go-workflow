@@ -1,6 +1,8 @@
 ---
 name: go-code-review
-description: Go code review checklist — idiomatic patterns, error handling, concurrency safety, interface design, and performance. Load when reviewing Go code changes or checking PRs.
+description: Go code review checklist — idiomatic patterns, error handling, concurrency safety, interface design, and performance.
+  TRIGGER when: reviewing Go code changes, checking PRs, user asks for code review, or validating Go code quality before merge.
+  DO NOT TRIGGER when: writing new code from scratch, working with non-Go languages, or discussing git workflow/commits.
 user-invocable: false
 allowed-tools:
   - Read
